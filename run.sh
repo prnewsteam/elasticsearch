@@ -9,6 +9,8 @@ if [ "${CURRENT_ENV}" == "" ]; then
 fi
 
 cp .env.${CURRENT_ENV} .env
+
+sudo sysctl -w vm.max_map_count=262144
 mkdir data/01 data/02 data/03
 sudo chmod 777 data/01 data/02 data/03
 
