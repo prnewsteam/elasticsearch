@@ -21,6 +21,7 @@ services:
     environment:
       - cluster.name=docker-cluster
       - bootstrap.memory_lock=true
+      - logger.restcontroller.level=error
       - discovery.zen.minimum_master_nodes=2
       - ${ELASTICSEARCH_OPTIONS}
     volumes:
@@ -45,7 +46,8 @@ services:
     environment:
       - cluster.name=docker-cluster
       - bootstrap.memory_lock=true
-      - "discovery.zen.ping.unicast.hosts=es01"
+      - logger.restcontroller.level=error
+      - discovery.zen.ping.unicast.hosts=es01
       - discovery.zen.minimum_master_nodes=2
       - ${ELASTICSEARCH_OPTIONS}
     volumes:
@@ -68,7 +70,8 @@ services:
     environment:
       - cluster.name=docker-cluster
       - bootstrap.memory_lock=true
-      - "discovery.zen.ping.unicast.hosts=es01"
+      - logger.restcontroller.level=error
+      - discovery.zen.ping.unicast.hosts=es01
       - discovery.zen.minimum_master_nodes=2
       - ${ELASTICSEARCH_OPTIONS}
     volumes:
