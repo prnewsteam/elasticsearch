@@ -16,7 +16,7 @@ x-ulimits: &default-ulimits
 
 services:
   es01:
-    image: elasticsearch:7.17.0
+    image: elasticsearch:7.17.2
     container_name: es01
     environment:
       - node.name=es01
@@ -43,7 +43,7 @@ services:
           memory: ${ELASTICSEARCH_MEMORY}
 
   es02:
-    image: elasticsearch:7.17.0
+    image: elasticsearch:7.17.2
     container_name: es02
     environment:
       - node.name=es02
@@ -68,7 +68,7 @@ services:
           memory: ${ELASTICSEARCH_MEMORY}
 
   es03:
-    image: elasticsearch:7.17.0
+    image: elasticsearch:7.17.2
     container_name: es03
     environment:
       - node.name=es03
